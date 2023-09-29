@@ -1,0 +1,30 @@
+---
+- hosts: all
+  gather_facts: true
+  vars:
+    demon_repo: https://github.com/hpc-tuwien/DEMon
+  tasks:
+    - name: Download DEMon repository
+      ansible.builtin.git:
+        repo: "{{ demon_repo }}"
+        dest: "home/{{ ansible_user }}/DEMon"
+        clone: true
+        force: true
+    
+    - name: Build DEMon Docker image
+      community.general.docker_image:
+        name: demon:latest
+        build:
+          path: "home/{{ ansible_user }}/DEMon/src/demon"
+        force_source: true
+        force_tag: true
+        source: build
+    
+    - name: Start DEMon container
+      community.docker.docker_container:
+        image: demon:latest
+        name: demon
+        published_ports:
+          - 5000:5000
+        recreate: true
+        restart_policy: on-failure

@@ -1,0 +1,4 @@
+Flask
+pybase64
+jsonpickle
+pillow
