@@ -1,4 +1,4 @@
-# DEMon: Decentralized Monitoring and Control for Highly Volatile Edge Environments
+# A Decentralized and Self-Adaptive Approach for Monitoring Volatile Edge Environments
 
 ## Abstract
 Edge computing offers resources for latency-sensitive Internet of Things (IoT) workloads through highly distributed computing
