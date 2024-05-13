@@ -196,9 +196,8 @@ int main(int argc, char *argv[]) {
                 break;
         }
         a = -1;
-        sleep(1); // sleep for 1 second
-        // You can adjust the sleep duration as needed
-    } while (10);
+        sleep(1);
+    } while (true);
     printf("exiting as requested\n");
     return 0;
 }
