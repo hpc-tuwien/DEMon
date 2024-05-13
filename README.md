@@ -20,6 +20,7 @@ retrieves the monitoring information, addressing the above-mentioned challenges.
 
 ![DEMon System Architecture](./images/architecture.jpg)
 
+**We have updated the source code and new experiments at this [branch](https://github.com/hpc-tuwien/DEMon/tree/major_revision) which will be merged in the future to the main branch.**
 ## Contributions
 - We present [`DEMon`](./src), a reliable and self-adjusting monitoring system designed for extremely dynamic edge environments, offering both efficient and decentralized information dissemination.
 - Introducing a stochastic group communication protocol featuring a gossip-based information dissemination algorithm and the [`impact of its hyperparameter`](./experiments/emulation-exp). Additionally, we propose the Leaderless Quorum Consensus (LQC) protocol for efficient and trustworthy data retrieval.
